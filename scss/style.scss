@@ -1,0 +1,84 @@
+@import "./reset";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "./nav";
+@import "./footer";
+@import "./header";
+@import "./welcome";
+@import "./about";
+@import "./skills";
+@import "./contact";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: Poppins,sans-serif;
+}
+
+.content{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/images/background.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(175%);
+  transition: filter 0.3s ease;
+}
+
+body.light .background {
+  filter: brightness(240%);
+}
+
+.contentBlock{
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  >p{
+    font-size: 1.2rem;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  >h3{
+    font-size: 2.5rem;
+    color: #2b8c3d;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container-xxl{
+    max-width: 1550px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container-xxl{
+    max-width: 1750px;
+  }
+}
+
+
+@media (min-width: 2000px) {
+  .container-xxl{
+    max-width: 1950px;
+
+  }
+}

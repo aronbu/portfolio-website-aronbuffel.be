@@ -1,0 +1,91 @@
+header{
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 140;
+  .headerLightModeSwitch{
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .hidden{
+      display: none;
+    }
+  }
+
+  .headerLanguageSwitch{
+    border-radius: 0.5rem;
+    background-color: #2b8c3d;
+    border: 1px solid #2b8c3d;
+    color: white;
+    display: flex;
+    gap: 0.4rem;
+    padding: 1rem 0.9rem;
+    transition: all 0.3s ease;
+
+    img{
+      height: 1.4rem;
+      object-fit: scale-down;
+
+      &.hidden{
+        display: none;
+      }
+    }
+
+    p{
+      font-weight: 500;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    &:hover{
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid white;
+    }
+  }
+}
+
+@media (max-width: 1000px){
+  header {
+    gap: 1rem;
+    top: 0.75rem;
+    right: 0.75rem;
+    .headerLightModeSwitch {
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+    }
+
+    .headerLanguageSwitch {
+      gap: 0.4rem;
+      padding: 0.6rem 0.5rem;
+      transition: all 0.3s ease;
+
+      img {
+        height: 1rem;
+        object-fit: scale-down;
+
+        &.hidden {
+          display: none;
+        }
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid white;
+      }
+    }
+  }
+}
