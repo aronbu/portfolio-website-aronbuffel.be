@@ -1,0 +1,161 @@
+.welcome {
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.welcome * {
+  margin-left: auto;
+  margin-right: auto;
+}
+.welcome p {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1.2rem;
+  font-weight: 400;
+}
+.welcome h1 {
+  font-size: 2.5rem;
+  color: #2b8c3d;
+  margin-bottom: 1.2rem;
+}
+.welcome h2 {
+  font-size: 1.5rem;
+  color: #c5c5c5;
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+.welcome .buttons {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+.welcome .buttons a {
+  text-decoration: none;
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  padding: 6px 20px;
+  position: relative;
+  transition: all 0.5s;
+  background-color: initial;
+  color: white;
+  line-height: 1.8rem;
+  font-weight: 600;
+  font-family: Poppins, sans-serif;
+}
+.welcome .buttons a::after {
+  border-radius: 0.5rem;
+  bottom: -3px;
+  content: "";
+  left: -3px;
+  position: absolute;
+  right: -3px;
+  top: -3px;
+  transition: all 0.5s;
+  z-index: -1;
+  background-position: 0 0;
+  background-size: 200% 100%;
+  background-image: linear-gradient(135deg, #32a252, #32a252 22%, #2a8a45 0, #2a8a45 28%, #228131 0, #228131 72%, #3f8e48 0, #3f8e48);
+}
+.welcome .buttons a:hover {
+  cursor: pointer;
+}
+.welcome .buttons a:hover::after {
+  background-position: 100% 0;
+}
+.welcome .buttons .downloadCV {
+  background-color: #2d2d2e;
+  border-radius: 0.5rem;
+}
+.welcome .buttons .downloadCV:hover {
+  background-color: transparent;
+}
+.welcome .buttons .contactMe {
+  background-color: transparent;
+  border-radius: 0.5rem;
+}
+.welcome .buttons .contactMe:hover {
+  background-color: #2d2d2e;
+}
+.welcome .me {
+  background: linear-gradient(45deg, transparent, #32a252 22%, transparent);
+  border-radius: 1rem;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  place-items: center;
+  width: min(80%, 100vh - 30rem);
+  aspect-ratio: 1/1;
+}
+.welcome .me .meImage {
+  overflow: hidden;
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+  border-radius: 1rem;
+  display: flex;
+  position: relative;
+  aspect-ratio: 1/1;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.welcome .me .meImage:hover {
+  -webkit-transform: rotate(0deg);
+}
+.welcome .me .meImage img {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  height: 100%;
+  z-index: 100;
+  display: block;
+  object-fit: cover;
+}
+.welcome .me .meImage canvas {
+  position: absolute;
+  z-index: 99;
+  aspect-ratio: 1/1;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 0);
+  opacity: 95%;
+}
+.welcome .links {
+  align-items: center;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  left: 0;
+  position: absolute;
+}
+.welcome .links a svg {
+  color: white;
+  transition: 0.3s all ease-in-out;
+}
+.welcome .links a:hover svg {
+  color: #2b8c3d;
+}
+.welcome .links::after {
+  background: #32a252;
+  content: "";
+  height: 2.5rem;
+  width: 1px;
+}
+
+@media (max-width: 1000px) {
+  .welcome p {
+    margin-top: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .welcome .links {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=indexWelcome.css.map */

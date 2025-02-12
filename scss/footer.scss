@@ -74,3 +74,37 @@ footer{
     }
   }
 }
+
+@media (max-width: 460px){
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 5.5rem;
+
+    .container-xxl {
+
+      gap: 0.6rem;
+
+      > p {
+        font-size: 2rem;
+      }
+
+      .permalinks {
+        gap: 0.6rem;
+        >a {
+          font-size: 0.8rem;
+        }
+
+      }
+      .socialLinks{
+
+        >a{
+          padding: 0.3rem;
+          border-radius: 0.3rem;
+          svg{
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

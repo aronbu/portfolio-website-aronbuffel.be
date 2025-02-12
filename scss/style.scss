@@ -1,13 +1,18 @@
 @import "./reset";
 @import "../node_modules/bootstrap/scss/bootstrap";
+
 @import "./nav";
 @import "./footer";
-@import "./header";
-@import "./welcome";
-@import "./about";
-@import "./skills";
-@import "./contact";
 
+@import "./indexHeader";
+@import "./indexWelcome";
+@import "./indexAbout";
+@import "./indexSkills";
+@import "./indexBlog";
+@import "./indexContact";
+
+@import "./blogHeader";
+@import "./blogContent";
 html {
   scroll-behavior: smooth;
 }

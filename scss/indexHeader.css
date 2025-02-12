@@ -1,0 +1,81 @@
+header.index {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 140;
+}
+header.index .headerLightModeSwitch {
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
+header.index .headerLightModeSwitch svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+header.index .headerLightModeSwitch .hidden {
+  display: none;
+}
+header.index .headerLanguageSwitch {
+  border-radius: 0.5rem;
+  background-color: #2b8c3d;
+  border: 1px solid #2b8c3d;
+  color: white;
+  display: flex;
+  gap: 0.4rem;
+  padding: 1rem 0.9rem;
+  transition: all 0.3s ease;
+}
+header.index .headerLanguageSwitch img {
+  height: 1.4rem;
+  object-fit: scale-down;
+}
+header.index .headerLanguageSwitch img.hidden {
+  display: none;
+}
+header.index .headerLanguageSwitch p {
+  font-weight: 500;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+header.index .headerLanguageSwitch:hover {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+@media (max-width: 1000px) {
+  header.index {
+    gap: 1rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  header.index .headerLightModeSwitch svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  header.index .headerLanguageSwitch {
+    gap: 0.4rem;
+    padding: 0.6rem 0.5rem;
+    transition: all 0.3s ease;
+  }
+  header.index .headerLanguageSwitch img {
+    height: 1rem;
+    object-fit: scale-down;
+  }
+  header.index .headerLanguageSwitch img.hidden {
+    display: none;
+  }
+  header.index .headerLanguageSwitch p {
+    font-size: 0.8rem;
+  }
+  header.index .headerLanguageSwitch:hover {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+  }
+}
+
+/*# sourceMappingURL=indexHeader.css.map */

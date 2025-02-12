@@ -11915,6 +11915,7 @@ nav {
 }
 nav a {
   padding: 0.8rem;
+  border-radius: 50%;
 }
 nav a svg {
   width: 1.5rem;
@@ -11922,9 +11923,22 @@ nav a svg {
 }
 nav a:hover {
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
 }
 
+@media (max-width: 400px) {
+  nav {
+    gap: 0.8rem;
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  nav a {
+    padding: 0.5rem;
+  }
+  nav a svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+}
 footer {
   background-color: rgba(43, 140, 61, 0.5);
   padding-top: 3rem;
@@ -11992,7 +12006,32 @@ footer .container-xxl .socialLinks > a:hover {
   transform: scale(1.2);
 }
 
-header {
+@media (max-width: 460px) {
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 5.5rem;
+  }
+  footer .container-xxl {
+    gap: 0.6rem;
+  }
+  footer .container-xxl > p {
+    font-size: 2rem;
+  }
+  footer .container-xxl .permalinks {
+    gap: 0.6rem;
+  }
+  footer .container-xxl .permalinks > a {
+    font-size: 0.8rem;
+  }
+  footer .container-xxl .socialLinks > a {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+  }
+  footer .container-xxl .socialLinks > a svg {
+    height: 1.5rem;
+  }
+}
+header.index {
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
@@ -12000,19 +12039,19 @@ header {
   gap: 1.5rem;
   z-index: 140;
 }
-header .headerLightModeSwitch {
+header.index .headerLightModeSwitch {
   margin-top: auto;
   margin-bottom: auto;
   cursor: pointer;
 }
-header .headerLightModeSwitch svg {
+header.index .headerLightModeSwitch svg {
   width: 1.5rem;
   height: 1.5rem;
 }
-header .headerLightModeSwitch .hidden {
+header.index .headerLightModeSwitch .hidden {
   display: none;
 }
-header .headerLanguageSwitch {
+header.index .headerLanguageSwitch {
   border-radius: 0.5rem;
   background-color: #2b8c3d;
   border: 1px solid #2b8c3d;
@@ -12022,50 +12061,50 @@ header .headerLanguageSwitch {
   padding: 1rem 0.9rem;
   transition: all 0.3s ease;
 }
-header .headerLanguageSwitch img {
+header.index .headerLanguageSwitch img {
   height: 1.4rem;
   object-fit: scale-down;
 }
-header .headerLanguageSwitch img.hidden {
+header.index .headerLanguageSwitch img.hidden {
   display: none;
 }
-header .headerLanguageSwitch p {
+header.index .headerLanguageSwitch p {
   font-weight: 500;
   margin-top: auto;
   margin-bottom: auto;
 }
-header .headerLanguageSwitch:hover {
+header.index .headerLanguageSwitch:hover {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid white;
 }
 
 @media (max-width: 1000px) {
-  header {
+  header.index {
     gap: 1rem;
     top: 0.75rem;
     right: 0.75rem;
   }
-  header .headerLightModeSwitch svg {
+  header.index .headerLightModeSwitch svg {
     width: 1.2rem;
     height: 1.2rem;
   }
-  header .headerLanguageSwitch {
+  header.index .headerLanguageSwitch {
     gap: 0.4rem;
     padding: 0.6rem 0.5rem;
     transition: all 0.3s ease;
   }
-  header .headerLanguageSwitch img {
+  header.index .headerLanguageSwitch img {
     height: 1rem;
     object-fit: scale-down;
   }
-  header .headerLanguageSwitch img.hidden {
+  header.index .headerLanguageSwitch img.hidden {
     display: none;
   }
-  header .headerLanguageSwitch p {
+  header.index .headerLanguageSwitch p {
     font-size: 0.8rem;
   }
-  header .headerLanguageSwitch:hover {
+  header.index .headerLanguageSwitch:hover {
     cursor: pointer;
     background-color: transparent;
     border: 1px solid white;
@@ -12106,7 +12145,8 @@ header .headerLanguageSwitch:hover {
   gap: 2rem;
   margin-bottom: 1rem;
 }
-.welcome .buttons button {
+.welcome .buttons a {
+  text-decoration: none;
   background-clip: padding-box;
   border: 3px solid transparent;
   padding: 6px 20px;
@@ -12118,7 +12158,7 @@ header .headerLanguageSwitch:hover {
   font-weight: 600;
   font-family: Poppins, sans-serif;
 }
-.welcome .buttons button::after {
+.welcome .buttons a::after {
   border-radius: 0.5rem;
   bottom: -3px;
   content: "";
@@ -12132,10 +12172,10 @@ header .headerLanguageSwitch:hover {
   background-size: 200% 100%;
   background-image: linear-gradient(135deg, #32a252, #32a252 22%, #2a8a45 0, #2a8a45 28%, #228131 0, #228131 72%, #3f8e48 0, #3f8e48);
 }
-.welcome .buttons button:hover {
+.welcome .buttons a:hover {
   cursor: pointer;
 }
-.welcome .buttons button:hover::after {
+.welcome .buttons a:hover::after {
   background-position: 100% 0;
 }
 .welcome .buttons .downloadCV {
@@ -12222,11 +12262,38 @@ header .headerLanguageSwitch:hover {
 @media (max-width: 1000px) {
   .welcome p {
     margin-top: 4rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .welcome h1, .welcome .h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  .welcome h2, .welcome .h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 600px) {
   .welcome .links {
     display: none;
+  }
+}
+@media (max-width: 420px) {
+  .welcome .buttons a {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+  }
+}
+@media (max-width: 379px) {
+  .welcome .buttons a {
+    font-size: 0.75rem;
+  }
+}
+@media (max-width: 352px) {
+  .welcome .buttons a {
+    font-size: 0.65rem;
+    line-height: 1.2rem;
   }
 }
 .about .aboutContainer {
@@ -12415,6 +12482,78 @@ header .headerLanguageSwitch:hover {
     gap: 0.7rem;
   }
 }
+.blog .blogPosts {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5%;
+  row-gap: 5cqw;
+}
+.blog .blogPosts .blogPost {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 2rem;
+  background: rgba(37, 37, 37, 0.6);
+}
+.blog .blogPosts .blogPost .blogPostImage {
+  height: 15rem;
+  overflow: hidden;
+}
+.blog .blogPosts .blogPost .blogPostImage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform ease-in-out 0.3s;
+}
+.blog .blogPosts .blogPost .blogPostDescription {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: white;
+  padding: 1.25rem 1.25rem;
+  position: relative;
+}
+.blog .blogPosts .blogPost .blogPostDescription .blogCategory {
+  margin-bottom: 0.75rem;
+}
+.blog .blogPosts .blogPost .blogPostDescription h4, .blog .blogPosts .blogPost .blogPostDescription .h4 {
+  margin-bottom: 0.75rem;
+  transition: color ease-in-out 0.3s;
+}
+.blog .blogPosts .blogPost .blogPostDescription .blogDate {
+  margin-bottom: 0.75rem;
+}
+.blog .blogPosts .blogPost .blogPostDescription .btn {
+  padding: 0.85rem;
+  color: #2b8c3d;
+  border: 1px solid #2b8c3d;
+  transition: all ease-in-out 0.3s;
+  font-weight: 500;
+}
+.blog .blogPosts .blogPost:hover {
+  cursor: pointer;
+}
+.blog .blogPosts .blogPost:hover .blogPostImage img {
+  transform: scale(120%);
+}
+.blog .blogPosts .blogPost:hover .blogPostDescription h4, .blog .blogPosts .blogPost:hover .blogPostDescription .h4 {
+  color: #2b8c3d;
+}
+.blog .blogPosts .blogPost:hover .blogPostDescription .btn {
+  color: white;
+  background-color: #2b8c3d;
+}
+
+@media (max-width: 1000px) {
+  .blog .blogPosts .blogPost {
+    width: 47.5%;
+  }
+}
+@media (max-width: 600px) {
+  .blog .blogPosts .blogPost {
+    width: 100%;
+  }
+}
 .contact .contactContainer {
   display: flex;
   gap: 4rem;
@@ -12449,6 +12588,279 @@ header .headerLanguageSwitch:hover {
 @media (max-width: 1000px) {
   .contact .contactContainer {
     gap: 2rem;
+  }
+}
+header div.blog {
+  margin-bottom: 0.5rem;
+  background-color: rgba(43, 140, 61, 0.5);
+  padding-left: 110px;
+  margin-right: 110px;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+header div.blog div.blogTop {
+  height: 3.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0;
+  border-radius: 0 0.75rem 0.75rem 0;
+  margin-left: 0;
+  --bs-gutter-x: 0;
+}
+header div.blog div.blogTop .titleAndButton {
+  width: 100%;
+  margin-right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  --bs-gutter-x: 0;
+}
+header div.blog div.blogTop .titleAndButton p.title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+header div.blog div.blogTop .titleAndButton .headerLanguageSwitch {
+  height: 2.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0.75rem;
+  display: flex;
+  gap: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #2c2c2c;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  transition: border ease-in-out 0.3s;
+  border: 1px solid #2c2c2c;
+}
+header div.blog div.blogTop .titleAndButton .headerLanguageSwitch p {
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1rem;
+}
+header div.blog div.blogTop .titleAndButton .headerLanguageSwitch img {
+  height: 75%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+header div.blog div.blogTop .titleAndButton .headerLanguageSwitch img.hidden {
+  display: none;
+}
+header div.blog div.blogTop .titleAndButton .headerLanguageSwitch:hover {
+  border: 1px solid white;
+}
+
+a.backToHome {
+  margin-left: 110px;
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
+a.backToHome svg {
+  height: 1.5rem;
+}
+a.backToHome:hover {
+  border-bottom: 1px solid white;
+}
+
+@media (min-width: 1400px) {
+  header div.blog div.blogTop {
+    max-width: unset;
+  }
+  header div.blog div.blogTop .titleAndButton {
+    max-width: unset;
+  }
+}
+@media (max-width: 1500px) {
+  header div.blog {
+    padding-left: 2rem;
+    margin-right: 2rem;
+  }
+  a.backToHome {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 1000px) {
+  header div.blog {
+    padding-left: 1rem;
+    margin-right: 1rem;
+  }
+  header a.backToHome {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 510px) {
+  header div.blog div.blogTop .titleAndButton p.title {
+    font-size: 1.35rem;
+  }
+  header div.blog div.blogTop .titleAndButton .headerLanguageSwitch {
+    height: 2rem;
+  }
+}
+@media (max-width: 435px) {
+  header div.blog div.blogTop .titleAndButton p.title {
+    font-size: 1.2rem;
+  }
+  header div.blog div.blogTop .titleAndButton .headerLanguageSwitch {
+    height: 1.8rem;
+  }
+  header div.blog div.blogTop .titleAndButton .headerLanguageSwitch p {
+    font-size: 0.8rem;
+  }
+}
+main.blogContent {
+  --bs-gutter-x: 0;
+  margin-bottom: 1.5rem;
+}
+main.blogContent h1, main.blogContent .h1 {
+  color: white;
+}
+main.blogContent .blogCategory {
+  display: flex;
+  gap: 0.5rem;
+}
+main.blogContent .blogCategory > .line {
+  height: 0.75rem;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  border-bottom-left-radius: 0.25rem;
+  width: 2rem;
+}
+main.blogContent .blogCategory h2, main.blogContent .blogCategory .h2 {
+  font-weight: 300;
+  color: white;
+  font-size: 1.3rem;
+}
+main.blogContent > p {
+  color: white;
+  font-weight: 300;
+}
+main.blogContent .contentBlocks {
+  display: flex;
+  flex-direction: column;
+}
+main.blogContent .contentBlocks .contentBlock {
+  display: flex;
+  height: 25rem;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main.blogContent .contentBlocks .contentBlock .text {
+  color: white;
+  width: 60%;
+}
+main.blogContent .contentBlocks .contentBlock .text a {
+  text-decoration: underline;
+  color: white;
+}
+main.blogContent .contentBlocks .contentBlock .image {
+  width: 35%;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 0.75rem;
+}
+main.blogContent .contentBlocks .contentBlock .image img, main.blogContent .contentBlocks .contentBlock .image video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-prev {
+  left: 0.7rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  z-index: 10;
+  text-align: center;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-prev::before {
+  font-size: 1.5rem;
+  transition: color ease-in-out 0.3s;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-prev:hover::before {
+  color: #2b8c3d;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-next {
+  right: 0.7rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  text-align: center;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-next::before {
+  font-size: 1.5rem;
+  transition: color ease-in-out 0.3s;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-next:hover::before {
+  color: #2b8c3d;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-list {
+  height: 100% !important;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-list .slick-track {
+  height: 100%;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-dots {
+  z-index: 10;
+  bottom: 0.5rem;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-dots li button::before {
+  color: white;
+  font-size: 10px;
+  opacity: 1;
+  transition: color ease-in-out 0.3s;
+}
+main.blogContent .contentBlocks .contentBlock .image.carousel .slick-dots li.slick-active button::before {
+  color: #2b8c3d;
+  opacity: 1;
+}
+main.blogContent .contentBlocks .contentBlock.rightText {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1500px) {
+  main.blogContent .contentBlocks .contentBlock {
+    flex-direction: column;
+    height: fit-content;
+    column-gap: 1rem;
+    align-items: center;
+  }
+  main.blogContent .contentBlocks .contentBlock.rightText {
+    flex-direction: column;
+  }
+  main.blogContent .contentBlocks .contentBlock .image {
+    height: 25rem;
+    width: 80%;
+  }
+  main.blogContent .contentBlocks .contentBlock .text {
+    height: fit-content;
+    width: 100%;
+  }
+}
+@media (max-width: 1500px) {
+  main.blogContent {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 1000px) {
+  main.blogContent {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 750px) {
+  main.blogContent .contentBlocks .contentBlock {
+    column-gap: 1rem;
+    align-items: center;
+  }
+  main.blogContent .contentBlocks .contentBlock.rightText {
+    flex-direction: column;
+  }
+  main.blogContent .contentBlocks .contentBlock .image {
+    height: 20rem;
+    width: 100%;
   }
 }
 html {

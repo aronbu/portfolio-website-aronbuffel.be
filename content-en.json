@@ -7,7 +7,7 @@
     "buttons": {
       "downloadCV":{
         "title": "Download my CV",
-        "link": "#"
+        "link": "/assets/documents/CV_Aron_Buffel.pdf"
       },
       "contactMe":{
         "title": "Contact me",
@@ -119,6 +119,442 @@
       }
     ]
   },
+  "blog": {
+    "sectionIntro": "Read more about my IT experiences",
+    "title": "My Blog",
+    "blogPostButtonText": "Lees meer",
+    "blogPosts": [
+      {
+        "id": 1,
+        "title": "Hack The Future",
+        "date": "22/11/2022",
+        "category": "Hackathon",
+        "contentBlocks": [
+          {
+            "titleBlock": "Introduction",
+            "texts": [
+              "Together with Jonathan Depaepe, I took part in Hack the Future 2022. The challenge we chose was “plant the future.” In this challenge, the participating teams had to build a website and back end where visitors could plant real trees to help the environment and add them to their own virtual forest on their profile. The required technologies were a ReactJS front end and a Java Spring back end."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost1/block1-1.jpg",
+              "../assets/images/blog/blogpost1/block1-2.mp4"
+            ]
+          },
+          {
+            "titleBlock": "Our experience",
+            "texts": [
+              "This was a very fun experience where I learned a lot in a very short time. The coaches from Optis, the company that organized this challenge, were always ready to help. While coding the project, Jonathan and I divided the work for the most part: Jonathan usually worked on the Java Spring back-end portion and I on the front end in ReactJS. After a full day of working on our website, we were very proud of our result. You can find screenshots of this website in the attached images."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost1/block2-1.jpg",
+              "../assets/images/blog/blogpost1/block2-2.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Awards ceremony",
+            "texts": [
+              "During the awards ceremony there were two prizes to win per challenge: the jury prize and the people’s choice. At first we thought we didn’t stand much of a chance, but when we saw we were among the nominees, hope began to rise. Then our name was called as the winner of the people’s prize—we’re very happy with this award."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost1/block3-1.jpg",
+              "../assets/images/blog/blogpost1/block3-2.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "MarsWin, AI racing simulation betting site",
+        "date": "31/12/2022",
+        "category": "IT project",
+        "contentBlocks": [
+          {
+            "titleBlock": "The assignment",
+            "texts": [
+              "For the “Trending topic” module, the project assignment is that everyone must work with a technology they have never used before. For this I’m in a group with Aico Mylleville, Daan Vander Haegen, Jonathan Depaepe, and Nicolas Loontjens."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost2/block1-1.png",
+              "../assets/images/blog/blogpost2/block1-2.mp4"
+            ]
+          },
+          {
+            "titleBlock": "Our project proposal",
+            "texts": [
+              "Our idea was to create a betting site and app where users can place bets on AI cars that race against each other. The division of work in our group is as follows: Jonathan builds the website with NextJS, Nicolas builds the app with Flutter, Aico is responsible for creating the API in Go, I make a game in Unity, and Daan is responsible for creating an AI that ensures the cars race against each other autonomously."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost2/block2-1.png",
+              "../assets/images/blog/blogpost2/block2-2.png"
+            ]
+          },
+          {
+            "titleBlock": "Our project",
+            "texts": [
+              "This project went very well and resulted in something we are all proud of. It took a few weeks of hard work to get everything fully functional, but fortunately we succeeded in the end. This certainly would not have been possible without the rest of the group, who ensured good collaboration and team spirit."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost2/block3-1.png",
+              "../assets/images/blog/blogpost2/block3-2.mp4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Smart IoT lighting and security system",
+        "date": "01/02/2023",
+        "category": "IT project",
+        "contentBlocks": [
+          {
+            "titleBlock": "Introduction",
+            "texts": [
+              "For the “Cloud and edge computing” module, we were asked to create a smart Internet of Things device that is also connected to a cloud system. For this I’m in a group with João Vanso Do Prado and Roel Spiessens."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost3/block1-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Our project proposal",
+            "texts": [
+              "This project also had to meet several requirements in terms of programming language, technology, communication, and cloud system, such as Wi-Fi communication and another form of wireless communication, three different types of sensors, a type of data that must always be monitored, an event triggered by data, a user and cloud platform, some computations that must happen on the cloud platform, and the code must be in C or Python.",
+              "To meet these requirements, my group and I came up with the idea of creating a smart lighting system, but there was a problem: it didn’t meet all the requirements. That’s when we decided to integrate a security system into our solution as well."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost3/block2-1.png"
+            ]
+          },
+          {
+            "texts": [
+              "On our system, a user will be able to do all kinds of things via the progressive web app, such as controlling the lights and setting a timer to turn them on or off, enabling lights to turn on or off with the motion sensor, activating the alarm so that if motion or sound is detected a buzzer sounds and a notification is sent to the app."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost3/block3-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Our project",
+            "texts": [
+              "We chose Azure Cloud as our cloud platform. At first we tried to use Azure’s IoT Hub, but unfortunately we couldn’t get it working. So we decided to work with a custom-coded Python server and host it on Azure. For the website, we created a standard HTML, CSS, and JavaScript site."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost3/block4-1.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Howest Goes USA trip to San Francisco",
+        "date": "11/04/2023",
+        "category": "School trip / Company visits",
+        "contentBlocks": [
+          {
+            "titleBlock": "Introduction",
+            "texts": [
+              "This year, Howest organized the trip to San Francisco in the USA again, after a three-year pause due to COVID. I was very pleased to learn that the trip would take place again this year. When we heard this, a couple of friends (Jonathan Depaepe and Yarne Savaete) and I signed up right away. We were also very relieved to hear the news that we were allowed to go along."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block1-1.jpg",
+              "../assets/images/blog/blogpost4/block1-2.jpg",
+              "../assets/images/blog/blogpost4/block1-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Day 1",
+            "texts": [
+              "It started early in the morning on Monday, April 2 in Bruges, gathering the Howest students from Bruges. Then the bus drove on to Kortrijk to pick up the other Howest students from Kortrijk and the Devine students. The trip really began with a 6-hour bus ride to Paris airport, where we then had to take our 12-hour flight to San Francisco. When we landed in San Francisco after 12 hours, it was still morning of the same day even though many hours had passed—jet lag is strange.",
+              "The first thing we did in San Francisco was a ride to our hostel, where we could already drop off our luggage before starting a city walk to explore the neighborhood a bit. On this tour we used the typical “cable cars” for the first time. It’s something quite unique; being one of their operators seems like a tough job to me. We also walked through quintessential San Francisco spots with steep hills and beautiful views. The walk eventually led to one of the many piers, “Pier 39,” a pier with lots of restaurants and entertainment. Next to the pier there is also a place where sea lions gather."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block2-1.jpg",
+              "../assets/images/blog/blogpost4/block2-2.jpg",
+              "../assets/images/blog/blogpost4/block2-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Day 2",
+            "texts": [
+              "The second day started with a walk across the Golden Gate Bridge. On the bridge we had very beautiful views of the city with the skyline of all the skyscrapers. After crossing the bridge we got back on the bus toward Silicon Valley for our first company visit at Palo Alto Networks. We first received a briefing about the company, where we learned that Palo Alto is a networking company with security at its core. We also heard from a few employees; they shared about their work experience and some tips. These tips were very informative, partly about searching and applying for IT jobs. Then we got a tour of the campus—this was a very large campus with many buildings and various amenities such as many food stalls, a gym, yoga, and sports classes.",
+              "After the first company visit we had some free time to eat. I got to eat In-N-Out for the first time. I had always wanted to try it because on social media they looked like the best burgers. And it was not a disappointment at all—the burgers were very good."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block3-1.jpg",
+              "../assets/images/blog/blogpost4/block3-2.jpg",
+              "../assets/images/blog/blogpost4/block3-3.jpg"
+            ]
+          },
+          {
+            "texts": [
+              "After lunch we were back on the bus to our second company visit, this time at Microsoft. We received a briefing from Nills and Emilio. The briefing started with their personal careers. Nills, who moved from Belgium, mainly gave tips on how to start a career in the US; Emilio gave tips on how you can still turn your life around at an older age and land a good job in big tech. Then it was mainly about AI and low code. There were also many questions from the group, and we received lots of useful answers and tips. The Q&A ran so long that there was no time left for a campus tour. What was also very interesting here was some additional information about the collaborations between OpenAI and Microsoft.",
+              "After the visit to Microsoft we drove on to the Apple Visitor Center, where we got a tour with some information about Apple and their campus. In the Visitor Center there is also a miniature of the Apple campus that you can zoom into with an iPad in Augmented Reality."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block4-1.jpg",
+              "../assets/images/blog/blogpost4/block4-2.jpg",
+              "../assets/images/blog/blogpost4/block4-3.jpg",
+              "../assets/images/blog/blogpost4/block4-4.jpg",
+              "../assets/images/blog/blogpost4/block4-5.jpg",
+              "../assets/images/blog/blogpost4/block4-6.jpg",
+              "../assets/images/blog/blogpost4/block4-7.jpg",
+              "../assets/images/blog/blogpost4/block4-8.gif"
+            ]
+          },
+          {
+            "titleBlock": "Day 3",
+            "texts": [
+              "The third day started with an alumni event where some Belgians who moved to America shared their experiences and tips. The first speaker was Thomas; he is one of the Belgians who moved to the United States to work in Silicon Valley for OpenAI. He told his story of how it all came about and shared some tips he picked up during his career. He also showed the Stripe website, on which he worked on the animations. It was truly an impressive site with the most detailed animations I have ever seen—for example, the sample prices on the site change based on location and how expensive prices are in that region.",
+              "The other speaker who came was Christean; he is a former Pinterest employee and now works for a new startup called Cambly. He also told his story about his career and gave some tips. The tips from both were very interesting; they were mainly about how to make the most of your career—for example, that building a network is very important and that being self-motivated and interested outside the classroom also offers many advantages."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block5-1.jpg",
+              "../assets/images/blog/blogpost4/block5-2.jpg"
+            ]
+          },
+          {
+            "texts": [
+              "After the lunch break we took the BART to Berkeley to visit the university. BART is the metro in San Francisco and connects downtown San Francisco with the surrounding areas. At the university we received a tour from some of the students who study there. It was a very large campus with many big buildings for specific purposes, such as a building for the library, one for “physiology,” one for “engineering,” and many more.",
+              "It was a very beautiful campus, but with a price tag of tens of thousands of dollars per year, I personally wouldn’t be willing to pay that. I’m glad Belgian education isn’t that expensive."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block6-1.jpg",
+              "../assets/images/blog/blogpost4/block6-2.jpg",
+              "../assets/images/blog/blogpost4/block6-3.jpg",
+              "../assets/images/blog/blogpost4/block6-4.jpg",
+              "../assets/images/blog/blogpost4/block6-5.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Day 4",
+            "texts": [
+              "We started the fourth day with a walk along the Painted Ladies and then a stop at Twin Peaks, where you have a beautiful panoramic view over the entire city. We also had some free time to wander around there.",
+              "After this we took the bus back to Silicon Valley, this time to visit Odoo. This is an ERP system that has evolved greatly over time. It was originally a small program but has grown into a very large application with many integrations. It is also a Belgian company that started in Waterschei. Here too we received many tips that we will be able to use later, such as starting smaller first and then expanding the scope and continuing to evolve."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block7-1.jpg",
+              "../assets/images/blog/blogpost4/block7-2.jpg",
+              "../assets/images/blog/blogpost4/block7-3.jpg",
+              "../assets/images/blog/blogpost4/block7-4.jpg"
+            ]
+          },
+          {
+            "texts": [
+              "In the afternoon we did another company visit at Oracle. It was a very beautiful campus with many buildings and also one of the racing sailboats on display. We received a presentation about Oracle and their new low-code software, which lets you easily build web apps without programming.",
+              "After that we took a walk through the Castro district and through Mission Dolores Park. It’s always nice to explore a bit more of the new-to-us city of San Francisco."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block8-1.jpg",
+              "../assets/images/blog/blogpost4/block8-2.jpg",
+              "../assets/images/blog/blogpost4/block8-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Day 5",
+            "texts": [
+              "The fifth day started with a walk through the city and a visit to Salesforce Park. The walk then also passed Oracle Park Stadium.",
+              "In this area our next company visit to Cloudflare was scheduled. There was also something very interesting: their way of generating randomness is by means of many lava lamps. We also got an office tour and a presentation about Cloudflare and their services. This was very interesting, and again we were able to get many tips from people with lots of experience. It was quite an experience to visit one of the largest networking and hosting companies."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block9-1.jpg",
+              "../assets/images/blog/blogpost4/block9-2.jpg",
+              "../assets/images/blog/blogpost4/block9-3.jpg",
+              "../assets/images/blog/blogpost4/block9-4.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Day 6",
+            "texts": [
+              "On the sixth day we were free and decided to go watch a baseball game. The game was the San Francisco Giants versus the Kansas City Royals. It was a very fun experience that I will probably not have again here in Europe. It’s quite different from football."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block10-1.jpg",
+              "../assets/images/blog/blogpost4/block10-2.jpg",
+              "../assets/images/blog/blogpost4/block10-3.mp4"
+            ]
+          },
+          {
+            "titleBlock": "Day 7",
+            "texts": [
+              "On the seventh day I started early in the morning with a walk; it happened to be the day of the San Francisco henge. This is when the path of the sun lines up with San Francisco’s street grid. It made for some beautiful photos of the view.",
+              "Also on this day we visited Alcatraz, an old maximum-security prison in the United States. It is located on an island so that the prisoners are well confined. The prison was very large with very small cells for the inmates. We were free on the island to walk around and explore. There was also an audio tour in the prison building."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block11-1.jpg",
+              "../assets/images/blog/blogpost4/block11-2.jpg",
+              "../assets/images/blog/blogpost4/block11-3.jpg",
+              "../assets/images/blog/blogpost4/block11-4.jpg",
+              "../assets/images/blog/blogpost4/block11-5.jpg",
+              "../assets/images/blog/blogpost4/block11-6.jpg",
+              "../assets/images/blog/blogpost4/block11-7.jpg",
+              "../assets/images/blog/blogpost4/block11-8.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Website for Podologie Amber Buffel",
+        "date": "01/06/2024",
+        "category": "IT project",
+        "contentBlocks": [
+          {
+            "titleBlock": "The website",
+            "texts": [
+              "My sister needed a website for her podology practice and asked me to build it. I handled the entire design and development myself. See the result at: <a href=”https://podologieamberbuffel.be/”>class=”textLink”>podologieamberbuffel.be</a>"
+            ],
+            "images": [
+              "../assets/images/blog/blogpost5/block1-1.jpg",
+              "../assets/images/blog/blogpost5/block1-2.jpg",
+              "../assets/images/blog/blogpost5/block1-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Technical choices",
+            "texts": [
+              "I chose a static website built in plain HTML, CSS, and JavaScript. The reason? The site needs few updates, and a CMS would only increase costs without offering real added value."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost5/block2-1.jpg",
+              "../assets/images/blog/blogpost5/block2-2.jpg",
+              "../assets/images/blog/blogpost5/block2-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "SEO & online visibility",
+            "texts": [
+              "In addition to the design and development, I also optimized the SEO. I also created and maintain the Google Business profile so the practice is easy to find in Google and Google Maps."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost5/block3-1.jpg",
+              "../assets/images/blog/blogpost5/block3-2.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Internship and summer job at Skkills",
+        "date": "02/08/2024",
+        "category": "Internship / Student job",
+        "contentBlocks": [
+          {
+            "titleBlock": "My internship",
+            "texts": [
+              "In February 2024 I started my internship at Skkills in Oostkamp, a subsidiary of Group Van Damme. My internship ran until June 2024 and I worked there as a developer. My tasks were: converting designs to plain HTML and CSS, making the designs functional in WordPress, and performing maintenance on existing websites—from small bug fixes to adding new features."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost6/block1-1.jpg",
+              "../assets/images/blog/blogpost6/block1-2.png",
+              "../assets/images/blog/blogpost6/block1-3.png"
+            ]
+          },
+          {
+            "titleBlock": "What I learned",
+            "texts": [
+              "This internship gave me the opportunity to discover many new skills. I learned to work in a professional environment and gained more insight into how web projects are set up and maintained."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost6/block2-1.png",
+              "../assets/images/blog/blogpost6/block2-2.png"
+            ]
+          },
+          {
+            "titleBlock": "Summer job",
+            "texts": [
+              "After my internship, I had the chance to work six more weeks as a student at Skkills. There I continued my role as a developer and was able to deepen my knowledge even more."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost6/block3-1.png",
+              "../assets/images/blog/blogpost6/block3-2.png"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Bachelor’s thesis: AI hand detection in Zoom app",
+        "date": "01/02/2025",
+        "category": "IT project / Bachelor’s thesis",
+        "contentBlocks": [
+          {
+            "titleBlock": "My idea",
+            "texts": [
+              "For my bachelor’s thesis, I developed a Zoom application that recognizes participants’ hand gestures during online meetings or classes. The goal? Collect quick, automated feedback with simple gestures like a thumbs up, thumbs down, or a raised finger—without extra apps or tools on the user side."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block1-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "From idea to prototype",
+            "texts": [
+              "The project started in Microsoft Teams, but it soon became clear there was no direct access to live video data. That’s why I switched to Zoom, in combination with recall.ai, to analyze the live video streams."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block2-1.png",
+              "../assets/images/blog/blogpost7/block2-2.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Technology behind the app",
+            "texts": [
+              "The application combines several technologies: React for the front end, NodeJS for the back end, and Python, MediaPipe, and TensorFlow for reliable AI-based hand-gesture detection."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block3-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "How it works",
+            "texts": [
+              "1.\tThe host adds the Zoom bot to the meeting.\n2.\tThe bot forwards live video data via recall.ai.\n3.\tThe Python server analyzes the footage and recognizes gestures.\n4.\tThe results are shown in real time in the Zoom app."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block4-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Result and future",
+            "texts": [
+              "The end result is a working prototype that detects hand gestures and displays results live in Zoom. Although the quiz functionality wasn’t finished by the deadline, the current version already offers a lot of potential for digital training and interactive online classes."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block5-1.mp4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Conditions page for Podologie Amber Buffel",
+        "date": "20/08/2025",
+        "category": "IT project",
+        "contentBlocks": [
+          {
+            "titleBlock": "Conditions page",
+            "texts": [
+              "For the website of Podologie Amber Buffel, I developed a new page with an overview of all conditions treated. Together we chose an interactive design that looks user-friendly and modern."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost8/block1-1.jpg",
+              "../assets/images/blog/blogpost8/block1-2.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Interactive design",
+            "texts": [
+              "The page includes an SVG illustration of the human body. Click a body part and you’re taken straight to the relevant information. On hover, a short explanation of the problem appears. View the page: <a href=”https://podologieamberbuffel.be/aandoeningen” class=”textLink”>podologieamberbuffel.be/aandoeningen</a>"
+            ],
+            "images": [
+              "../assets/images/blog/blogpost8/block2-1.jpg",
+              "../assets/images/blog/blogpost8/block2-2.jpg"
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "contact": {
     "sectionIntro": "Get in touch with me",
     "title": "Contact Me",
@@ -148,6 +584,9 @@
     },{
       "title": "My Skills",
       "link": "#skills"
+    },{
+      "title": "Blog",
+      "link": "#blog"
     },{
       "title": "Contact",
       "link": "#contact"

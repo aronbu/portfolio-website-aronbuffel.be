@@ -7,7 +7,7 @@
     "buttons": {
       "downloadCV":{
         "title": "Download mijn CV",
-        "link": "#"
+        "link": "/assets/documents/CV_Aron_Buffel.pdf"
       },
       "contactMe":{
         "title": "Contacteer mij",
@@ -29,11 +29,11 @@
       },
       {
         "cardTitle": "Interesses",
-        "cardText": "React, NodeJS, Python, Java, .NET"
+        "cardText": "NodeJS, Javascript, Python, Java, .NET, PHP, React, AI"
       }
     ],
     "paragraphs": [
-      "Goeiedag, mijn naam is Aron Buffel. Ik ben momenteel student aan Howest in Brugge, waar ik de opleiding TI Software Engineering volg. Programmeren is altijd al een passie van mij geweest en ik heb de afgelopen jaren veel ervaring opgedaan met verschillende programmeertalen en technologieën.",
+      "Goeiedag, mijn naam is Aron Buffel. Ik ben net afgestudeerd in de bacheloropleiding Toegepaste Informatica: Software Engineering aan Howest in Brugge. Programmeren is altijd al een passie van mij geweest en ik heb de afgelopen jaren veel ervaring opgedaan met verschillende programmeertalen en technologieën.",
       "Gedurende mijn studie heb ik al veel verschillende projecten uitgevoerd, zowel op het gebied van front-end als back-end development. Ik vind het leuk om uitdagende problemen op te lossen en mooie, functionele interfaces te ontwerpen. Ik heb ervaring met HTML, CSS, JavaScript, React voor de front-end en met Java, C#, NodeJS en Python voor de back-end.",
       "Mijn interesse in zowel front-end als back-end development heeft mij doen besluiten dat ik mij wil richten op een functie als Full-stack developer. Ik geloof dat mijn kennis en vaardigheden mij goed zullen positioneren voor deze rol en ik kijk ernaar uit om mijn vaardigheden te blijven ontwikkelen en uit te breiden.",
       "Naast mijn studie en mijn interesse voor programmeren, houd ik van fitnessen, koersfietsen en reizen. Ik ben een enthousiaste en gedreven persoon die altijd op zoek is naar nieuwe uitdagingen en kansen om te groeien."
@@ -119,6 +119,441 @@
       }
     ]
   },
+  "blog": {
+    "sectionIntro": "Kom meer te weten over mijn IT ervaringen",
+    "title": "Mijn Blog",
+    "blogPostButtonText": "Lees meer",
+    "blogPosts": [
+      {
+        "id": 1,
+        "title": "Hack The Future",
+        "date": "22/11/2022",
+        "category": "Hackaton",
+        "contentBlocks": [
+          {
+            "titleBlock": "Inleiding",
+            "texts": [
+              "Samen met Jonathan Depaepe nam ik deel aan Hack the Future 2022. De challenge die wij hadden gekozen was “plant de toekomst”. In deze challenge moesten de deelnemende teams elk een website en back-end bouwen waar de bezoekers echte bomen konden planten om het milieu te helpen en deze toevoegen aan hun eigen virtueel bos op hun profiel. De technologieën die moesten worden gebruikt waren een ReactJS front-end en een Java Spring back-end."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost1/block1-1.jpg",
+              "../assets/images/blog/blogpost1/block1-2.mp4"
+            ]
+          },
+          {
+            "titleBlock": "Onze ervaring",
+            "texts": [
+              "Dit wat een heel leuke ervaring waar ik heel veel heb bijgeleerd op een erg korte tijd. De coaches van Optis, het bedrijf die deze challenge organiseerde waren altijd klaar om hulp te verlenen. Tijdens het coderen aan het project hadden Jonathan en ik het werk grotendeels verdeeld, Jonathan werkte meestal aan het Java Spring back-end gedeelte en ik aan de front-end in ReactJS. Na een hele dag aan onze website te hebben gewerkt waren we erg trots op ons resultaat. Screenshots van deze website kan u in de bijlage afbeeldingen terug vinden."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost1/block2-1.jpg",
+              "../assets/images/blog/blogpost1/block2-2.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Prijsuitreiking",
+            "texts": [
+              "Tijdens de prijsuitreiking waren er 2 prijzen te winnen per challange, namelijk de juryprijs en de publieksfavoriet. Eerst dachten we dat we niet zo veel kans gingen maken maar toen we zagen dat we bij de genomineerden waren begon de hoop te stijgen. Toen werd onze naam afgeroepen als winnaar voor de publiekprijs, we zijn erg blij met deze prijs."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost1/block3-1.jpg",
+              "../assets/images/blog/blogpost1/block3-2.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "MarsWin, AI race simulatie goksite",
+        "date": "31/12/2022",
+        "category": "IT Project",
+        "contentBlocks": [
+          {
+            "titleBlock": "De opdracht",
+            "texts": [
+              "Voor de module “Trending topic” is de opdracht voor het project dat iedereen elk met een technologie moet werken dat hij nog nooit heeft gebruikt. Hiervoor zit ik in de groep met Aico Mylleville, Daan Vander Haegen, Jonathan Depaepe en Nicolas Loontjens. "
+            ],
+            "images": [
+              "../assets/images/blog/blogpost2/block1-1.png",
+              "../assets/images/blog/blogpost2/block1-2.mp4"
+            ]
+          },
+          {
+            "titleBlock": "Ons project voorstel",
+            "texts": [
+              "Wij hadden hiervoor het idee om een gok site en app te maken waren de gebruikers weddenschappen kunnen plaatsen op AI auto’s die racen tegen elkaar. De verdeling van het werk onder onze groep gaat als volgt Jonathan maakt de website met NextJS, Nicolas maakt de app met flutter, Aico is verantwoordelijk voor het maken van de API in GO, Ik maak een game in Unity waarin Daan verantwoordelijk is om een AI te maken die er voor zorgt dat de auto zelf tegen elkaar racen."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost2/block2-1.png",
+              "../assets/images/blog/blogpost2/block2-2.png"
+            ]
+          },
+          {
+            "titleBlock": "Ons project",
+            "texts": [
+              "Dit project verliep erg goed en er is een erg mooi resultaat van gekomen waar we allen trots op zijn. Het was enkele weken hard werken om het toch volledig werkende te krijgen maar gelukkig was dit uiteindelijk gelukt. Dit ging zeker niet gelukt zijn zonder de andere van de groep die zorgden voor een goede samenwerking en groepssfeer."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost2/block3-1.png",
+              "../assets/images/blog/blogpost2/block3-2.mp4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Slim IOT licht en security systeem",
+        "date": "01/02/2023",
+        "category": "IT project",
+        "contentBlocks": [
+          {
+            "titleBlock": "Inleiding",
+            "texts": [
+              "Voor de module “Cloud and edge computing” word er ons gevraagd een slim “Internet of Things” device te maken dat ook verbonden is met een Cloud systeem. Hiervoor zit ik in de groep met João Vanso Do Prado en Roel Spiessens."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost3/block1-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Ons project voorstel",
+            "texts": [
+              "Dit project moest ook voldoen aan enkele benodigdheden qua programmeertaal, technologie, communicatie en cloud systeem, zoals wifi communicatie en een andere vorm van draadloze communicatie, 3 verschillende types sensors, een type data die altijd gemonitord moet blijven, een evenement getriggerd door data, user en cloud platform, enkele commutaties moeten gebeuren op het cloud platform en de code moet in C of Python.",
+              "Om aan deze benodigdheden te voldoen had mijn groepje en ik het idee om een slim licht systeem te maken, maar dit had een probleem dit voldeed niet aan alle benodigdheden. Maar toen kwam het idee om ook een security systeem in ons systeem in te werken."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost3/block2-1.png"
+            ]
+          },
+          {
+            "texts": [
+              "Op ons systeem zal een user van allerlei dingen kunnen doen via de “progressive web app” zoals de lichten kunnen bedienen en een timer in stellen om aan of uit te gaan, activeren of de lichten aan of uit gaan met de beweging sensor, het alarm activeren die er voor zorgt als er beweging of geluid word gedetecteerd dat een buzzer afgaat en een notificatie naar de app gestuurd word."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost3/block3-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Ons project",
+            "texts": [
+              "Als cloud platform werd ons Azure Cloud gekozen. Eerst hadden we dit geprobeerd met “IoT hub” van Azure maar dit kregen we dit jammer genoeg niet werkende. En toen kozen we voor te werken met een zelf geprogrammeerde Python server en deze te hosten op Azure. En voor de website maakten we een standaard HTML, CSS en Javascript website."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost3/block4-1.jpg"
+            ]
+          }
+        ]
+      },
+
+      {
+        "id" : 4,
+        "title": "Howest Goes USA trip naar San Francisco",
+        "date": "11/04/2023",
+        "category": "Schoolreis / Bedrijfsbezoeken",
+        "contentBlocks": [
+          {
+            "titleBlock": "Inleiding",
+            "texts": ["Dit jaar organiseerde Howest opnieuw de trip naar San Francisco in de USA, na een 3 jarige stop wegens corona. Het verheugde me enorm om te vernemen dat de reis dit jaar weer zou plaatsvinden. Toen we dit hoorden hadden een paar vrienden (Jonathan Depaepe en Yarne Savaete) en ik ons meteen ingeschreven. We waren ook erg opgelucht om het nieuws te horen dat we mee mochten gaan."],
+            "images": [
+              "../assets/images/blog/blogpost4/block1-1.jpg",
+              "../assets/images/blog/blogpost4/block1-2.jpg",
+              "../assets/images/blog/blogpost4/block1-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Dag 1",
+            "texts":  [
+              "Het startte s ’morgensvroeg op maandag 2 april in Brugge, met het verzamelen van de Howest studenten uit Brugge. Toen reed de bus door naar Kortrijk om daar de andere Howest studenten uit Kortrijk op te halen en de studenten van Devine. Toen begon de reis echt met eerst een 6 uur lange busrit naar de luchthaven van Parijs. Waar we toen onze 12 uur lange vlucht moesten nemen naar San Francisco. Toen we na 12 uur landde in San Francisco was het nog steeds ochtend in de zelfde dag terwijl er vele uren gepasseerd waren, toch wel raar die jetlag.",
+              "Het eerste wat we deden in San Francisco was een rit naar onze hostel, waar we onze bagage al konden plaatsen voor dat we begonnen met een stadswandeling om de buurt wat te verkennen. In deze tour hadden we voor het eerst de typische “cable cars” gebruikt. Dit is wel iets heel apart, hiervan bestuurder zijn het lijkt mij ook wel nog een moeilijke job. We liepen ook door typische San Francisco-plaatsen met steile hellingen en mooie uitzichten. De wandeling was uiteindelijk naar één van de vele pieren, “Pier 39” dit is een pier met veel restaurants en entertainment. Naast de pier is er ook een plaats waar zeeleeuwen zich verzamelen."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block2-1.jpg",
+              "../assets/images/blog/blogpost4/block2-2.jpg",
+              "../assets/images/blog/blogpost4/block2-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Dag 2",
+            "texts":  [
+              "De tweede dag startte met een wandeling over de Golden Gate Bridge. Op de brug hadden we zeer mooie zichten van de stad met de skyline van alle skyscrapers. Nadat we de brug hadden overgestoken zaten we weer op de bus richting Silicon Valley voor ons eerste bedrijfsbezoek bij Palo Alto Networks. Hier kregen we eerst een briefing over het bedrijf, hier leerden we dat Palo Alto een netwerk bedrijf is waar security vooral centraal staat. Hier kregen ook nog een paar medewerkers te horen, ze deelden met ons wat over hun werkervaring en ook wat tips. Deze tips waren wel erg informatief omdat een deel ervan ging over het zoeken en solliciteren voor IT jobs .Toen kregen we ook een rondleiding in de campus, dit was een erg grote campus met vele gebouwen en verschillende accommodaties zoals vele eetkraampjes, een fitness ,yoga en sportlessen.",
+              "Na het eerste bedrijfsbezoek waren we even vrij om te eten. Toen heb ik voor het eerst In-And-Out kunnen eten. Ik had dit altijd al wel eens willen eten wat dit zag er als de beste burgers uit op sociale media. En het was totaal geen teleurstelling, de burgers waren zeer goed."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block3-1.jpg",
+              "../assets/images/blog/blogpost4/block3-2.jpg",
+              "../assets/images/blog/blogpost4/block3-3.jpg"
+            ]
+          },
+          {
+            "texts":  [
+              "Na de lunch zaten we weer op de bus naar ons tweede bedrijfsbezoek deze keer was dit bij Microsoft. Hier kregen we een briefing door Nills en Emilio. In deze briefing ging eerst even over hun persoonlijke carrière. Nills de persoon die vanuit België verhuisde, gaf vooral tips over hoe je een carrière in de VS kan starten, Emilio gaf tips hoe je op wat oudere leeftijd nog steeds je leven kunt omkeren en zo toch een goede job in big tech job te verkrijgen. Toen ging het vooral over AI en low code. Hier waren ook veel vragen uit de groep, hierop hebben we veel nuttige antwoorden en tips gekregen. De vragenronde was zelf zo lang uitgelopen dat er geen tijd meer over was voor een rondleiding in de campus. Wat ook erg interessant was hier was wat meer info over de samenwerkingen tussen OpenAI en Microsoft.",
+              "Na het bezoek aan Microsoft waren we doorgereden naar het Apple Visitor Center waar we een rondleiding kregen met wat info over het Apple en hun campus. In de Visitor Center is er ook een miniatuur van de Apple campus waarmee je dan met een iPad kan op inzoomen in Augmented Reality."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block4-1.jpg",
+              "../assets/images/blog/blogpost4/block4-2.jpg",
+              "../assets/images/blog/blogpost4/block4-3.jpg",
+              "../assets/images/blog/blogpost4/block4-4.jpg",
+              "../assets/images/blog/blogpost4/block4-5.jpg",
+              "../assets/images/blog/blogpost4/block4-6.jpg",
+              "../assets/images/blog/blogpost4/block4-7.jpg",
+              "../assets/images/blog/blogpost4/block4-8.gif"
+            ]
+          },
+          {
+            "titleBlock": "Dag 3",
+            "texts":  [
+              "De derde dag startte met een Alumni event waar enkele Belgen die verhuisd zijn naar Amerika hun ervaringen en tips deelden. De eerste spreker was Thomas, hij is één van de Belgen die verhuisd is naar de Verengde Staten om te werken in Silicon Valley voor OpenAI. Hij vertelde zijn verhaal hoe dit allemaal is verlopen en deelde enkele tips die hij zelf heeft ondervonden tijdens zijn carrière. Hij toonde ook de site van Stripe, hieraan heeft hij gewerkt aan de animaties. Dit was toch echt wel een indrukwekkende site met de meest gedetailleerde animaties die ik ooit gezien heb. Zoals alles van voorbeeldprijzen op de site veranderen op basis van locatie en hoe duur de prijzen in die regio zijn.",
+              "De andere spreker die kwam is Christean, hij is ex Pinterest medewerker en werkt nu voor een nieuwe startup genaamd Cambly. Hij deed ook zijn verhaal over zijn carrière en gaf ook wat tips. De tips van beide waren wel erg interessant ze gingen voornamelijk over hoe je het beste kan maken van je carrière, zoals dat een netwerk bouwen erg belangrijk is en dat zelf geïnteresseerd zijn buiten het vak ook vele voordelen biedt."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block5-1.jpg",
+              "../assets/images/blog/blogpost4/block5-2.jpg"
+            ]
+          },
+          {
+            "texts":  [
+              "Achter de lunchpauze pakten we de BART naar Berkeley om de universiteit te bezoeken. De BART is de metro in San Francisco, en maakt de verbinding tussen downtown San Francisco en omstreken. Op de universiteit kregen we een rondleiding van enkele van de studenten die hier studeren. Dit was een erg grote campus met vele grote gebouwen voor specifieke doelen zoals: een gebouw voor de bibliotheek, een voor “physiology”, een voor “engineering” en nog vele meer.",
+              "Dit was een erg mooie campus maar voor het prijskaartje van enkele tienduizenden dollar per jaar zou ik dit er persoonlijk niet voor overhebben. Toch wel blij dat het Belgische onderwijs niet zo prijzig is."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block6-1.jpg",
+              "../assets/images/blog/blogpost4/block6-2.jpg",
+              "../assets/images/blog/blogpost4/block6-3.jpg",
+              "../assets/images/blog/blogpost4/block6-4.jpg",
+              "../assets/images/blog/blogpost4/block6-5.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Dag 4",
+            "texts":  [
+              "We startte de vierde dag met een wandeling lang de Painted Ladies en dan nog een stop op de Twin Peaks waarop je een mooie panorama zicht hebt over de hele stad. Hier waren we ook nog even vrij om rond te wandelen.",
+              "Hierna namen we terug de bus naar Silicon Valley, deze keer om Odoo te bezoeken. Dit is een ERP systeem dat erg is geëvolueerd over de tijd. Het was oorspronkelijk een klein programma maar is uit gegroeid tot een erg groot programma met veel integraties. Het is ook een Belgisch bedrijf dat is gestart in Waterschei. Ook hier hebben we vele tips gekregen die we later zullen kunnen gebruiken. Zoals eerst kleiner starten en daarna de scope vergroten en blijven evolueren."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block7-1.jpg",
+              "../assets/images/blog/blogpost4/block7-2.jpg",
+              "../assets/images/blog/blogpost4/block7-3.jpg",
+              "../assets/images/blog/blogpost4/block7-4.jpg"
+            ]
+          },
+          {
+            "texts":  [
+              "Na de middag deden we nog een bedrijfsbezoek aan Oracle. Dit was een erg mooie campus met veel gebouwen en ook een van de sportzeilboten op display. Hier kregen we een voorstelling over Oracle en hun nieuwe low code software, waarmee je gemakkelijk web apps kan maken zonder te programmeren.",
+              "Hierna deden we nog een wandeling door de Castro wijk en door Mission Dolores Park. Dit is altijd leuk om nog wat van de voor ons nieuwe stad San Francisco te verkennen."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block8-1.jpg",
+              "../assets/images/blog/blogpost4/block8-2.jpg",
+              "../assets/images/blog/blogpost4/block8-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Dag 5",
+            "texts":  [
+              "De vijfde dag startte met een wandeling door de stad en een bezoek aan het Salesforce Park. Daarna liep de wandeling ook langs het Oracle Park Stadium.",
+              "In deze buurt was ook ons volgend bedrijfsbezoek aan CloudFlare voorzien. Hier was ook iets erg interessant hun manier om randomness te bepalen is aan de hand van vele lavalampen. Hier kregen we ook een office tour en ook een voorstelling over CloudFlare en hun services. Dit was ook erg interessant en ook weer vele tips kunnen halen uit mensen met veel ervaring. Het was een hele ervaring om een van de grootse netwerk en hosting bedrijven te kunnen bezoeken."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block9-1.jpg",
+              "../assets/images/blog/blogpost4/block9-2.jpg",
+              "../assets/images/blog/blogpost4/block9-3.jpg",
+              "../assets/images/blog/blogpost4/block9-4.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Dag 6",
+            "texts":  [
+              "De zesde dag waren we vrij en hadden we besloten om een baseball match te gaan bekijken. Deze match was de San Francisco Giants versus de Kansas City Royals. Dit was wel een erg leuke ervaring die ik waarschijnlijk niet meer zal meemaken hier in Europa. Het is toch wel iets anders dan voetbal."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block10-1.jpg",
+              "../assets/images/blog/blogpost4/block10-2.jpg",
+              "../assets/images/blog/blogpost4/block10-3.mp4"
+            ]
+          },
+          {
+            "titleBlock": "Dag 7",
+            "texts":  [
+              "De zevende dag startte ik vroeg in de morgen met een ochtendwandeling, het was namens net de dag dat het San Francisco henge is. Dit is wanneer het pad van de zon op de zelfde lijn loopt als het stratenpatroon van San Francisco. Dit zorgde voor een paar mooie foto’s van het uitzicht.",
+              "Ook op deze dag deden we een bezoek aan Alcatraz een oude streng bewaakte gevangenis uit de Verenigde Staten. Het is namelijk op een eiland gelegen zodanig de gevangenen goed vast zitten. De gevangenis was erg groot met erg kleine cellen voor de gevangenen. We waren vrij op het eiland om rond te lopen en verkennen. In het gevangenis gebouw was er ook een audiotour."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost4/block11-1.jpg",
+              "../assets/images/blog/blogpost4/block11-2.jpg",
+              "../assets/images/blog/blogpost4/block11-3.jpg",
+              "../assets/images/blog/blogpost4/block11-4.jpg",
+              "../assets/images/blog/blogpost4/block11-5.jpg",
+              "../assets/images/blog/blogpost4/block11-6.jpg",
+              "../assets/images/blog/blogpost4/block11-7.jpg",
+              "../assets/images/blog/blogpost4/block11-8.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Website voor Podologie Amber Buffel",
+        "date": "01/06/2024",
+        "category": "IT project",
+        "contentBlocks": [
+          {
+            "titleBlock": "De website",
+            "texts": [
+              "Mijn zus had een website nodig voor haar podologiepraktijk. Ze vroeg mij om deze te maken. Ik heb het volledige design en de ontwikkeling zelf verzorgd. Bekijk het resultaat op: <a href=”https://podologieamberbuffel.be/” class=”textLink”>podologieamberbuffel.be</a>"
+            ],
+            "images": [
+              "../assets/images/blog/blogpost5/block1-1.jpg",
+              "../assets/images/blog/blogpost5/block1-2.jpg",
+              "../assets/images/blog/blogpost5/block1-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Technische keuzes",
+            "texts": [
+              "Ik koos voor een statische website gebouwd in pure HTML, CSS en JavaScript. De reden? De site heeft weinig updates nodig, en een CMS zou de kosten enkel verhogen zonder echte meerwaarde te bieden."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost5/block2-1.jpg",
+              "../assets/images/blog/blogpost5/block2-2.jpg",
+              "../assets/images/blog/blogpost5/block2-3.jpg"
+            ]
+          },
+          {
+            "titleBlock": "SEO & Online zichtbaarheid",
+            "texts": [
+              "Naast het ontwerp en de ontwikkeling heb ik ook de SEO geoptimaliseerd. Daarbovenop heb ik het Google Business-profiel aangemaakt en onderhoud ik dit, zodat de praktijk goed vindbaar is in Google en Google Maps."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost5/block3-1.jpg",
+              "../assets/images/blog/blogpost5/block3-2.jpg"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Stage en vakantiejob bij Skkills",
+        "date": "02/08/2024",
+        "category": "Stage / Studentenjob",
+        "contentBlocks": [
+          {
+            "titleBlock": "Mijn stage",
+            "texts": [
+              "In februari 2024 startte ik mijn stage bij Skkills in Oostkamp, een dochterbedrijf van Group Van Damme. Mijn stage liep tot juni 2024 en ik werkte er als developer. Mijn taken waren: Design omzetten naar pure HTML en CSS, De designs functioneel maken in WordPress en Onderhoud uitvoeren aan bestaande websites: van kleine bugfixes tot nieuwe functionaliteiten toevoegen"
+            ],
+            "images": [
+              "../assets/images/blog/blogpost6/block1-1.jpg",
+              "../assets/images/blog/blogpost6/block1-2.png",
+              "../assets/images/blog/blogpost6/block1-3.png"
+            ]
+          },
+          {
+            "titleBlock": "Wat ik geleerd heb",
+            "texts": [
+              "Deze stage bood me de kans om veel nieuwe vaardigheden te ontdekken. Ik leerde werken in een professionele omgeving en kreeg meer inzicht in hoe webprojecten worden opgezet en onderhouden."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost6/block2-1.png",
+              "../assets/images/blog/blogpost6/block2-2.png"
+            ]
+          },
+          {
+            "titleBlock": "Vakantiejob",
+            "texts": [
+              "Na mijn stage kreeg ik de kans om nog zes weken als jobstudent bij Skkills te werken. Hier zette ik mijn rol als developer verder en kon ik mijn kennis nog meer verdiepen."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost6/block3-1.png",
+              "../assets/images/blog/blogpost6/block3-2.png"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Bachelorproef: AI handdetectie in zoom app",
+        "date": "01/02/2025",
+        "category": "IT project / Bachelorproef",
+        "contentBlocks": [
+          {
+            "titleBlock": "Mijn idee",
+            "texts": [
+              "Voor mijn bachelorproef ontwikkelde ik een Zoom-applicatie die handgebaren van deelnemers herkent tijdens online vergaderingen of lessen. Het doel? Snelle en geautomatiseerde feedback verzamelen met simpele gebaren zoals een duim omhoog, omlaag of een opgestoken vinger — zonder extra apps of tools aan de gebruiker kant."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block1-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Van idee tot prototype",
+            "texts": [
+              "Het project startte in Microsoft Teams, maar al snel bleek dat er geen directe toegang was tot live videodata. Daarom stapte ik over naar Zoom, in combinatie met recall.ai, om de live videostreams te analyseren."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block2-1.png",
+              "../assets/images/blog/blogpost7/block2-2.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Technologie achter de app",
+            "texts": [
+              "De applicatie combineert verschillende technologieën: React voor de front-end, NodeJS voor de back-end en Python, mediapipe en tensorflow voor de betrouwbare AI-detectie van handgebaren."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block3-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Hoe het werkt",
+            "texts": [
+              "1.\tDe host voegt de Zoom-bot toe aan de meeting.<br/>2.\tDe bot stuurt live videodata door via recall.ai.<br/>3.\t De Python-server analyseert de beelden en herkent gebaren.<br/>4.\tDe resultaten worden real-time in de Zoom-app getoond."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block4-1.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Resultaat en toekomst",
+            "texts": [
+              "Het eindresultaat is een werkend prototype dat handgebaren detecteert en resultaten live toont in Zoom. Hoewel de quizfunctionaliteit niet binnen de deadline afgerond raakte, biedt de huidige versie al veel potentieel voor digitale trainingen en interactieve online lessen."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost7/block5-1.mp4"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Aandoeningen pagina voor Podologie Amber Buffel",
+        "date": "20/08/2025",
+        "category": "IT project",
+        "contentBlocks": [
+          {
+            "titleBlock": "Aandoeningen-pagina",
+            "texts": [
+              "Voor de website van Podologie Amber Buffel ontwikkelde ik een nieuwe pagina met een overzicht van alle behandelde aandoeningen. Samen kozen we voor een interactief ontwerp dat gebruiksvriendelijk en modern oogt."
+            ],
+            "images": [
+              "../assets/images/blog/blogpost8/block1-1.jpg",
+              "../assets/images/blog/blogpost8/block1-2.jpg"
+            ]
+          },
+          {
+            "titleBlock": "Interactief design",
+            "texts": [
+              "De pagina bevat een SVG-illustratie van het menselijk lichaam. Klik op een lichaamsdeel en je wordt meteen doorgestuurd naar de juiste informatie. Bij hover verschijnt er een korte uitleg over het probleem. Bekijk de pagina: <a href=”https://podologieamberbuffel.be/aandoeningen” class=”textLink”>podologieamberbuffel.be/aandoeningen</a>"
+            ],
+            "images": [
+              "../assets/images/blog/blogpost8/block2-1.jpg",
+              "../assets/images/blog/blogpost8/block2-2.jpg"
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "contact": {
     "sectionIntro": "Neem contact op",
     "title": "Contacteer Mij",
@@ -148,6 +583,9 @@
     },{
       "title": "Mijn Vaardigheden",
       "link": "#skills"
+    },{
+      "title": "Blog",
+      "link": "#blog"
     },{
       "title": "Contact",
       "link": "#contact"
