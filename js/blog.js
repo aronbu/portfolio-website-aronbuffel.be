@@ -1,5 +1,9 @@
-// blog.js — multilingual blog post rendering with Slick + mobile-friendly lightbox
-
+// blog.js — multilingual blog post rendering with Slick + mobile-friendly, swipeable lightbox
+document.addEventListener("dragstart", (e) => {
+    if (e.target.matches(".carousel img, .carousel video, .ab-lightbox .ab-media img, .ab-lightbox .ab-media video")) {
+        e.preventDefault();
+    }
+});
 // ---------- URL / lang helpers ----------
 function getLangFromURL() {
     const params = new URLSearchParams(window.location.search);
@@ -32,12 +36,10 @@ function getPostId() {
     if (idParam && /^\d+$/.test(idParam)) return parseInt(idParam, 10);
 
     const segments = window.location.pathname.split("/").filter(Boolean);
-    // last non-empty segment (e.g., ".../blog/1" or ".../blog/1/")
     let last = segments[segments.length - 1] || "";
     last = last.replace(/\.(html?|php)$/i, "");
     if (/^\d+$/.test(last)) return parseInt(last, 10);
 
-    // fallback: try previous segment
     const prev = segments[segments.length - 2] || "";
     if (/^\d+$/.test(prev)) return parseInt(prev, 10);
 
@@ -72,10 +74,10 @@ function initCarousels() {
         window.jQuery(".carousel").each(function () {
             window.jQuery(this).slick({
                 slidesToShow: 1,
+                slidesToScroll: 1,
                 arrows: true,
                 dots: true,
                 adaptiveHeight: true,
-                slidesToScroll: 1,
                 autoplay: true,
                 autoplaySpeed: 3000,
             });
@@ -127,13 +129,11 @@ function sanitizeHTML(html) {
                 walk(node);
                 return;
             }
-            // strip disallowed attributes
             [...el.attributes].forEach(attr => {
                 const ok = allowedAttrs[el.tagName] || [];
                 if (!ok.includes(attr.name.toLowerCase())) el.removeAttribute(attr.name);
             });
 
-            // harden links
             if (el.tagName === "A") {
                 let href = (el.getAttribute("href") || "").trim();
                 href = normalizeQuotes(href);
@@ -200,6 +200,7 @@ function renderContentBlocks(container, contentBlocks = []) {
                 video.className = "blogVideo";
                 video.setAttribute("playsinline", "");
                 video.setAttribute("preload", "metadata");
+                video.draggable = false;
                 // No controls in carousel to avoid native fullscreen interception
                 video.muted = true;
 
@@ -239,13 +240,11 @@ async function loadBlog(lang) {
         const res = await fetch(contentPath);
         const data = await res.json();
 
-        // Set switch button label
         const langBtnText = document.querySelector(".headerLanguageSwitch p");
         if (langBtnText && data.headerButtonText) {
             langBtnText.textContent = data.headerButtonText;
         }
 
-        // Get post id & find post
         const postId = getPostId();
         const post = (data.blog && Array.isArray(data.blog.blogPosts))
             ? data.blog.blogPosts.find((p) => Number(p.id) === Number(postId))
@@ -256,7 +255,6 @@ async function loadBlog(lang) {
             return;
         }
 
-        // Title, category/date
         const h1 = document.querySelector(".blogContent h1");
         if (h1) h1.textContent = post.title || "";
 
@@ -267,7 +265,6 @@ async function loadBlog(lang) {
             catH2.innerHTML = `${cat}${cat && date ? " — " : ""}${date}`;
         }
 
-        // Content blocks
         const blocksContainer = document.querySelector(".contentBlocks");
         if (blocksContainer) {
             renderContentBlocks(blocksContainer, post.contentBlocks || []);
@@ -281,7 +278,6 @@ async function loadBlog(lang) {
 }
 
 function loadNavbarLinks(lang) {
-    // Update back link & nav links with lang
     const backLink = document.querySelector("header a.backToHome");
     if (backLink) backLink.setAttribute("href", `../index.html?lang=${lang}#blog`);
     const backLinkText = document.querySelector("header a.backToHome")?.lastChild;
@@ -289,7 +285,6 @@ function loadNavbarLinks(lang) {
         backLinkText.textContent = ` ${UI_TEXT[lang].backHome}`;
     }
 
-    // Ensure top nav keeps lang param
     document.querySelectorAll("nav a[href^='../#']").forEach((a) => {
         const hash = a.getAttribute("href").split("#")[1] || "";
         a.setAttribute("href", `../index.html?lang=${lang}#${hash}`);
@@ -324,7 +319,6 @@ document.addEventListener("DOMContentLoaded", () => {
     loadNavbarLinks(currentLanguage);
     loadFooter(currentLanguage);
 
-    // Toggle language and persist in URL
     const langSwitch = document.querySelector(".headerLanguageSwitch");
     if (langSwitch) {
         langSwitch.addEventListener("click", () => {
@@ -337,7 +331,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Back/forward support if ?lang changes
     window.addEventListener("popstate", () => {
         currentLanguage = getLangFromURL();
         updateFlagUI(currentLanguage);
@@ -348,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* ===========================
-   LIGHTBOX (zoom on click)
+   LIGHTBOX (zoom on click) + Swipe
    =========================== */
 (function () {
     let overlay, inner, mediaWrap, prevBtn, nextBtn, closeBtn;
@@ -358,7 +351,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function ensureLightboxStyles() {
         if (document.getElementById("ab-lightbox-styles")) return;
         const css = `
-    /* ---- Lightbox mobile-friendly styles ---- */
     :root{
       --ab-pad-x: clamp(12px, 4vw, 32px);
       --ab-pad-y: clamp(12px, 4vh, 32px);
@@ -366,7 +358,6 @@ document.addEventListener("DOMContentLoaded", () => {
       --ab-btn-bg: rgba(255,255,255,.14);
       --ab-btn-fg: #fff;
     }
-
     body.ab-no-scroll{overflow:hidden; touch-action:none;}
 
     .ab-lightbox{
@@ -384,6 +375,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .ab-lightbox .ab-media{
       position:relative; display:flex; align-items:center; justify-content:center;
       max-width:90vw; max-height:90vh;
+      /* Allow vertical scrolling gestures to be ignored by us, we handle horizontal swipes */
+      touch-action: pan-y pinch-zoom;
     }
     .ab-lightbox .ab-media img,
     .ab-lightbox .ab-media video{
@@ -392,6 +385,7 @@ document.addEventListener("DOMContentLoaded", () => {
       width:auto; height:auto; object-fit:contain;
       border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,.5);
       background:#000;
+      will-change: transform;
     }
 
     .ab-lightbox .ab-close,
@@ -412,15 +406,11 @@ document.addEventListener("DOMContentLoaded", () => {
     .ab-lightbox .ab-next{ right:24px }
     .ab-lightbox .ab-prev[disabled], .ab-lightbox .ab-next[disabled]{ opacity:.35; cursor:default }
 
-    /* Make disabled arrows completely disappear on very small screens */
     @media (max-width: 480px){
       .ab-lightbox .ab-prev[disabled], .ab-lightbox .ab-next[disabled]{ display:none; }
     }
-
-    /* Respect notches & dynamic viewport on mobile */
     @media (max-width: 768px){
       :root{ --ab-btn: 52px; }
-
       .ab-lightbox .ab-inner{
         padding:
           calc(var(--ab-pad-y) + env(safe-area-inset-top))
@@ -428,18 +418,13 @@ document.addEventListener("DOMContentLoaded", () => {
           calc(var(--ab-pad-y) + env(safe-area-inset-bottom))
           calc(var(--ab-pad-x) + env(safe-area-inset-left));
       }
-
-      .ab-lightbox .ab-media{
-        max-width:100vw;
-        max-height:calc(100dvh - (var(--ab-pad-y) + env(safe-area-inset-top) + var(--ab-pad-y) + env(safe-area-inset-bottom)));
-      }
+      .ab-lightbox .ab-media,
       .ab-lightbox .ab-media img,
       .ab-lightbox .ab-media video{
         max-width:100vw;
         max-height:calc(100dvh - (var(--ab-pad-y) + env(safe-area-inset-top) + var(--ab-pad-y) + env(safe-area-inset-bottom)));
         border-radius:10px;
       }
-
       .ab-lightbox .ab-prev{ left: calc(10px + env(safe-area-inset-left)); }
       .ab-lightbox .ab-next{ right: calc(10px + env(safe-area-inset-right)); }
       .ab-lightbox .ab-close{
@@ -448,10 +433,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    /* Thumbs look tappable; prevent native video interactions in carousel */
     .carousel img, .carousel video{ cursor: zoom-in; }
     .ab-thumb{ position: relative; }
-    .ab-thumb-video video{ pointer-events: none; }
+    .ab-thumb-video video{ pointer-events: none; } /* avoid native fullscreen on tap */
     .ab-thumb .ab-play-overlay{
       position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);
       width:64px; height:64px; border-radius:999px;
@@ -463,6 +447,17 @@ document.addEventListener("DOMContentLoaded", () => {
     @media (max-width:480px){
       .ab-thumb .ab-play-overlay{ width:56px; height:56px; font-size:24px; }
     }
+    
+    .carousel img,
+.carousel video,
+.ab-lightbox .ab-media img,
+.ab-lightbox .ab-media video {
+  -webkit-user-drag: none;   /* iOS/Safari */
+  user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none; /* disable long-press menu on iOS */
+}
     `;
         const style = document.createElement("style");
         style.id = "ab-lightbox-styles";
@@ -527,6 +522,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (e.key === "ArrowLeft") go(-1);
             if (e.key === "ArrowRight") go(1);
         });
+
+        // Attach swipe handlers
+        attachSwipeHandlers();
     }
 
     function pauseAnyVideo() {
@@ -558,6 +556,7 @@ document.addEventListener("DOMContentLoaded", () => {
             video.setAttribute("playsinline", "");
             video.setAttribute("preload", "metadata");
             video.setAttribute("controls", "");
+            video.draggable = false
             video.autoplay = true;
 
             const source = document.createElement("source");
@@ -571,6 +570,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const img = document.createElement("img");
             img.src = item.src;
             img.alt = "zoomed media";
+            img.draggable =false;
             mediaWrap.appendChild(img);
         }
 
@@ -629,6 +629,83 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.add("ab-no-scroll");
     }
 
+    // Swipe handling inside the lightbox
+    function attachSwipeHandlers() {
+        const swipe = {
+            dragging: false,
+            startX: 0,
+            startY: 0,
+            dx: 0,
+            dy: 0,
+            pointerId: null,
+            el: null
+        };
+
+        function onPointerDown(e) {
+            // left mouse button only if mouse
+            if (e.pointerType === "mouse" && e.button !== 0) return;
+            swipe.dragging = true;
+            swipe.pointerId = e.pointerId;
+            swipe.startX = e.clientX;
+            swipe.startY = e.clientY;
+            swipe.dx = 0;
+            swipe.dy = 0;
+            swipe.el = mediaWrap.querySelector("img,video");
+            if (swipe.el) swipe.el.style.transition = "none";
+            try { mediaWrap.setPointerCapture(e.pointerId); } catch {}
+        }
+
+        function onPointerMove(e) {
+            if (!swipe.dragging || !swipe.el) return;
+            swipe.dx = e.clientX - swipe.startX;
+            swipe.dy = e.clientY - swipe.startY;
+
+            // if mostly horizontal, prevent scrolling/selection
+            if (Math.abs(swipe.dx) > Math.abs(swipe.dy)) {
+                e.preventDefault();
+            }
+            swipe.el.style.transform = `translateX(${swipe.dx}px)`;
+        }
+
+        function resetTransform(el) {
+            if (!el) return;
+            el.style.transition = "transform 200ms ease";
+            el.style.transform = "translateX(0)";
+            setTimeout(() => {
+                if (el) el.style.transition = "";
+            }, 220);
+        }
+
+        function onPointerUpLike(e) {
+            if (!swipe.dragging) return;
+            swipe.dragging = false;
+            try { mediaWrap.releasePointerCapture(swipe.pointerId); } catch {}
+            const el = swipe.el;
+            const dx = swipe.dx;
+            const dy = swipe.dy;
+            swipe.el = null;
+            swipe.pointerId = null;
+
+            const threshold = 60;
+            const isHorizontalSwipe = Math.abs(dx) > threshold && Math.abs(dx) > Math.abs(dy);
+
+            if (isHorizontalSwipe) {
+                if (dx < 0) go(1); else go(-1);
+                // No need to reset old el, new media is rendered
+            } else {
+                resetTransform(el);
+            }
+        }
+
+        mediaWrap.addEventListener("pointerdown", onPointerDown, { passive: true });
+        mediaWrap.addEventListener("pointermove", onPointerMove, { passive: false });
+        mediaWrap.addEventListener("pointerup", onPointerUpLike, { passive: true });
+        mediaWrap.addEventListener("pointercancel", onPointerUpLike, { passive: true });
+        mediaWrap.addEventListener("pointerleave", (e) => {
+            if (e.pointerId === swipe.pointerId) onPointerUpLike(e);
+        }, { passive: true });
+    }
+
     // Public attach function (idempotent)
     window.attachLightboxHandlers = function attachLightboxHandlers() {
         ensureLightboxStyles();
@@ -643,7 +720,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const carousel = e.target.closest(".carousel");
             if (!carousel) return;
 
-            // Find a clicked IMG or VIDEO (or an overlay sitting on top of a video)
             let img = e.target.closest("img");
             let vid = e.target.closest("video");
 
@@ -657,7 +733,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!img && !vid) return;
 
-            // Resolve the clicked src
             let clickedSrc = "";
             if (img) {
                 clickedSrc = img.getAttribute("src") || "";
